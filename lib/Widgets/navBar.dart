@@ -61,6 +61,11 @@ class navBarCustom extends StatelessWidget {
       ],
       onTap: (index) {
         switch (index){
+          case 1:
+            return Navigator.of(context).pushNamed(
+              '/categories',
+              arguments: 1000,
+            );
           case 4:
             return Navigator.of(context).pushNamed(
               '/menu',

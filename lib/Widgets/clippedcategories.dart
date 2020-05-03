@@ -21,6 +21,7 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
   Color innercircle = Color(0xffE50026);
   Color externcircle = Color(0xffE50026);
   Color iconfont = Colors.white;
+  Color bcolor = Colors.white;
   double stopA = 0.0;
   double stopB = 1.0;
   String straps = "assets/images/bubble straps invisible.png";
@@ -31,6 +32,7 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
       onTap: (){
         setState(() {
           if(!bubblestate){
+            bcolor = Color(0x00000000);
             iconfont = Color(0x00000000);
             innercircle = Color(0x00000000);
             stopA = 0.999999;
@@ -63,8 +65,10 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 300),
         decoration: BoxDecoration(
+          border: Border.all(color: bcolor,width: 3),
           image: DecorationImage(
-            image: AssetImage(straps)
+            image: AssetImage(straps),
+            fit: BoxFit.cover,
           ),
           gradient: RadialGradient(
             colors: [
@@ -74,7 +78,7 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
             stops: [stopA,stopB],
 
           ),
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(50*widget.size),
         ),
         margin: EdgeInsets.fromLTRB(20, 20, 10, 10),
         height: 100 * widget.size,
@@ -88,6 +92,7 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
                 child: FaIcon(
                   widget.iconfa,
                   color: iconfont,
+                  size: 30*widget.size,
                 ),
               ),
               Text(
@@ -95,7 +100,10 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
                 style: TextStyle(
                     fontFamily: 'Roboto',
                     color: iconfont,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12*widget.size,
+                ),
+
               ),
             ],
           ),
