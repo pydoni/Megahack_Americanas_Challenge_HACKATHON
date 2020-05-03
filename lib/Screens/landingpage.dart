@@ -2,69 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:megahackamericanas/Widgets/productgrid.dart';
 import 'package:megahackamericanas/Widgets/clippedcategories.dart';
+import 'package:megahackamericanas/Widgets/navBar.dart';
 
 class LandingPage extends StatelessWidget {
-  TextStyle navBarFont = TextStyle(
-      fontFamily: 'Roboto', color: Colors.white, fontWeight: FontWeight.bold);
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Theme.of(context).primaryColor,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.search,
-              color: Colors.white,
-            ),
-            title: Text(
-              'Pesquisar',
-              style: navBarFont,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.list,
-              color: Colors.white,
-            ),
-            title: Text(
-              'Categorias',
-              style: navBarFont,
-            ),
-          ),
-          BottomNavigationBarItem(
-              icon: Image.asset(
-                "assets/images/americanas_logo.png",
-                height: 40,
-              ),
-              title: Container(
-                height: 0.0,
-              )),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.shoppingBasket,
-              color: Colors.white,
-            ),
-            title: Text(
-              'Carrinho',
-              style: navBarFont,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.th,
-              color: Colors.white,
-            ),
-            title: Text(
-              'Menu',
-              style: navBarFont,
-            ),
-          ),
-        ],
-        onTap: (index) {},
-      ),
+      bottomNavigationBar: navBarCustom(),
       body: Container(
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
@@ -85,20 +31,20 @@ class LandingPage extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          ClippedCategories('Informatica',FontAwesomeIcons.laptop),
-                          ClippedCategories('Brinquedos',FontAwesomeIcons.carSide),
-                          ClippedCategories('Bebês',FontAwesomeIcons.baby),
-                          ClippedCategories('filmes',FontAwesomeIcons.film),
-                          ClippedCategories('Beleza',FontAwesomeIcons.highlighter),
+                          ClippedCategories('Informatica',FontAwesomeIcons.laptop,1),
+                          ClippedCategories('Brinquedos',FontAwesomeIcons.carSide,1),
+                          ClippedCategories('Bebês',FontAwesomeIcons.baby,1),
+                          ClippedCategories('filmes',FontAwesomeIcons.film,1),
+                          ClippedCategories('Beleza',FontAwesomeIcons.highlighter,1),
                         ],
                       ),
                       Row(
                         children: <Widget>[
-                          ClippedCategories('Eletroportateis',FontAwesomeIcons.blender),
-                          ClippedCategories('Importados',FontAwesomeIcons.planeDeparture),
-                          ClippedCategories('Alimentos',FontAwesomeIcons.hamburger),
-                          ClippedCategories('Moveis e\ndecoração',FontAwesomeIcons.couch),
-                          ClippedCategories('Moda',FontAwesomeIcons.tshirt),
+                          ClippedCategories('Eletroportateis',FontAwesomeIcons.blender,1),
+                          ClippedCategories('Importados',FontAwesomeIcons.planeDeparture,1),
+                          ClippedCategories('Alimentos',FontAwesomeIcons.hamburger,1),
+                          ClippedCategories('Moveis e\ndecoração',FontAwesomeIcons.couch,1),
+                          ClippedCategories('Moda',FontAwesomeIcons.tshirt,1),
                         ],
                       ),
                     ],
