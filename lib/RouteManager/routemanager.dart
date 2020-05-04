@@ -5,7 +5,6 @@ import '../Screens/categories.dart';
 
 class RouteManager {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(builder: (_) => LandingPage());

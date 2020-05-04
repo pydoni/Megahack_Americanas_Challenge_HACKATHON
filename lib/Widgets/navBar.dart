@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class navBarCustom extends StatelessWidget {
   TextStyle navBarFont = TextStyle(
       fontFamily: 'Roboto', color: Colors.white, fontWeight: FontWeight.bold);
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
@@ -60,7 +61,7 @@ class navBarCustom extends StatelessWidget {
         ),
       ],
       onTap: (index) {
-        switch (index){
+        switch (index) {
           case 1:
             return Navigator.of(context).pushNamed(
               '/categories',

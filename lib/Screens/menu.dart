@@ -3,9 +3,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Menu extends StatelessWidget {
   TextStyle iconfont = TextStyle(
-      fontFamily: 'Roboto', color: Colors.white, fontWeight: FontWeight.bold,fontSize: 17);
+      fontFamily: 'Roboto',
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 17);
   TextStyle minorfont = TextStyle(
-      fontFamily: 'Roboto', color: Colors.white, fontWeight: FontWeight.bold,fontSize: 11);
+      fontFamily: 'Roboto',
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 11);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +22,7 @@ class Menu extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(0, 50, 0, 40),
             child: GestureDetector(
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pushNamed(
                   '/',
                 );
@@ -27,9 +33,11 @@ class Menu extends StatelessWidget {
                   Image.asset(
                     "assets/images/americanas_logo.png",
                     height: 70,
-
                   ),
-                  Text("Início", style: iconfont,),
+                  Text(
+                    "Início",
+                    style: iconfont,
+                  ),
                 ],
               ),
             ),
@@ -40,30 +48,73 @@ class Menu extends StatelessWidget {
               shrinkWrap: true,
               crossAxisCount: 3,
               children: <Widget>[
-                menuOption("Meus Pedidos", FontAwesomeIcons.box),
-                menuOption("Notificações", FontAwesomeIcons.solidBell),
-                menuOption("Favoritos", FontAwesomeIcons.solidHeart),
-                menuOption("Leitor de código\n      de barras", FontAwesomeIcons.barcode),
-                menuOption("   Lojas\npróximas", FontAwesomeIcons.storeAlt),
-                menuOption("Meus vales", FontAwesomeIcons.ticketAlt),
-                menuOption("Aqui tem\ndesconto", FontAwesomeIcons.percentage),
-                menuOption("     Cartão\nAmericanas", FontAwesomeIcons.solidCreditCard),
-                menuOption("Mensagens", FontAwesomeIcons.solidEnvelope),
+                menuOption(
+                  "Meus Pedidos",
+                  FontAwesomeIcons.box,
+                ),
+                menuOption(
+                  "Notificações",
+                  FontAwesomeIcons.solidBell,
+                ),
+                menuOption(
+                  "Favoritos",
+                  FontAwesomeIcons.solidHeart,
+                ),
+                menuOption("Leitor de código\n      de barras",
+                    FontAwesomeIcons.barcode),
+                menuOption(
+                  "   Lojas\npróximas",
+                  FontAwesomeIcons.storeAlt,
+                ),
+                menuOption(
+                  "Meus vales",
+                  FontAwesomeIcons.ticketAlt,
+                ),
+                menuOption(
+                  "Aqui tem\ndesconto",
+                  FontAwesomeIcons.percentage,
+                ),
+                menuOption(
+                  "     Cartão\nAmericanas",
+                  FontAwesomeIcons.solidCreditCard,
+                ),
+                menuOption(
+                  "Mensagens",
+                  FontAwesomeIcons.solidEnvelope,
+                ),
               ],
             ),
           ),
           lineDivider(),
-          Text("Venda com a gente",style: minorfont,),
+          Text(
+            "Venda com a gente",
+            style: minorfont,
+          ),
           lineDivider(),
-          Text("Atendimento pelo telefone",style: minorfont,),
+          Text(
+            "Atendimento pelo telefone",
+            style: minorfont,
+          ),
           lineDivider(),
-          Text("Compre pelo telefone",style: minorfont,),
+          Text(
+            "Compre pelo telefone",
+            style: minorfont,
+          ),
           lineDivider(),
-          Text("Regras compras online",style: minorfont,),
+          Text(
+            "Regras compras online",
+            style: minorfont,
+          ),
           lineDivider(),
-          Text("Regras descontos Lojas Americanas",style: minorfont,),
+          Text(
+            "Regras descontos Lojas Americanas",
+            style: minorfont,
+          ),
           lineDivider(),
-          Text("Sobre o app",style: minorfont,),
+          Text(
+            "Sobre o app",
+            style: minorfont,
+          ),
           lineDivider(),
         ],
       ),
@@ -72,19 +123,26 @@ class Menu extends StatelessWidget {
 
   Container lineDivider() {
     return Container(
-          color: Colors.white,
-          height: 3,
-          width: 250,
-          margin: EdgeInsets.fromLTRB(0, 2, 0, 2),
-        );
+      color: Colors.white,
+      height: 3,
+      width: 250,
+      margin: EdgeInsets.fromLTRB(0, 2, 0, 2),
+    );
   }
 
   Column menuOption(name, fai) {
     return Column(
-                children: <Widget>[
-                  FaIcon(fai,color: Colors.white, size: 40,),
-                  Text(name, style: iconfont,),
-                ],
-              );
+      children: <Widget>[
+        FaIcon(
+          fai,
+          color: Colors.white,
+          size: 40,
+        ),
+        Text(
+          name,
+          style: iconfont,
+        ),
+      ],
+    );
   }
 }

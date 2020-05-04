@@ -57,16 +57,16 @@ class ProductGrid extends StatelessWidget {
               ),
               Row(
                 children: <Widget>[
-                  Product("Barbeador","999,99","1.jpg"),
-                  Product("Air-fryer","999,99","2.jpg"),
-                  Product("Notebook","999,99","1.jpg"),
+                  Product("Barbeador", "999,99", "1.jpg"),
+                  Product("Air-fryer", "999,99", "2.jpg"),
+                  Product("Notebook", "999,99", "1.jpg"),
                 ],
               ),
               Row(
                 children: <Widget>[
-                  Product("Banco Imobiliario","999,99","4.jpg"),
-                  Product("Caixa de som ","999,99","5.jpg"),
-                  Product("Celular","999,99","6.jpg"),
+                  Product("Banco Imobiliario", "999,99", "4.jpg"),
+                  Product("Caixa de som ", "999,99", "5.jpg"),
+                  Product("Celular", "999,99", "6.jpg"),
                 ],
               ),
               GestureDetector(
