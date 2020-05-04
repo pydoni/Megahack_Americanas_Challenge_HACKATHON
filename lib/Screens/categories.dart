@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../Widgets/clippedcategories.dart';
-import '../Widgets/navBar.dart';
+import '../Components/clippedcategories.dart';
+import '../Components/navBar.dart';
 
 class Categories extends StatelessWidget {
   @override

@@ -1,13 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:megahackamericanas/Widgets/productgrid.dart';
-import 'package:megahackamericanas/Widgets/clippedcategories.dart';
-import 'package:megahackamericanas/Widgets/navBar.dart';
+import 'package:megahackamericanas/Components/productgrid.dart';
+import 'package:megahackamericanas/Components/clippedcategories.dart';
+import 'package:megahackamericanas/Components/navBar.dart';
 
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       bottomNavigationBar: navBarCustom(),
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -21,7 +23,8 @@ class LandingPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                width: MediaQuery.of(context).size.width * 0.7,
+                margin: EdgeInsets.fromLTRB(8, 20, 0, 5),
                 child: Image.asset('assets/images/americanas-logo.png'),
               ),
               Container(

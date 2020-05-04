@@ -21,7 +21,6 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
   Color bcolor = Colors.white;
   double stopA = 0.0;
   double stopB = 1.0;
-  String straps = "assets/images/bubble straps invisible.png";
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +33,7 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
             innercircle = Color(0x00000000);
             stopA = 0.999999;
             bubblestate = true;
-            Future.delayed(const Duration(milliseconds: 100), () {
-              setState(() {
-                straps = "assets/images/bubble straps.png";
-              });
-            });
+
 
             Future.delayed(const Duration(milliseconds: 500), () {
               Navigator.of(context).pushNamed(
@@ -50,7 +45,6 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
             innercircle = Theme.of(context).primaryColor;
             stopA = 0.0;
             bubblestate = false;
-            straps = "assets/images/bubble straps invisible.png";
           }
         });
       },
@@ -58,10 +52,7 @@ class _ClippedCategoriesState extends State<ClippedCategories> {
         duration: Duration(milliseconds: 300),
         decoration: BoxDecoration(
           border: Border.all(color: bcolor, width: 3),
-          image: DecorationImage(
-            image: AssetImage(straps),
-            fit: BoxFit.cover,
-          ),
+
           gradient: RadialGradient(
             colors: [
               innercircle,
